@@ -15,12 +15,14 @@ class Person(object):
     def birth_day(self):
         return self._birth_day
 
+    # 不要直接操作属性 name，防止产生外部依赖，而且可能需要做相关逻辑判断
     @birth_day.setter
     def birth_day(self, value):
         if value > date.today().day:
             raise ValueError("birth_day's value is invalid")
         self._birth_day = value
 
+    # 不可变更
     @property
     def age(self):
         today = date.today()
@@ -33,11 +35,21 @@ class Person(object):
     # def sex(self):
     #     return self._sex
 
+    # 避免性别存储类型暴露
+    @property
     def is_male(self):
         return self._sex
 
+    @property
     def is_female(self):
         return not self._sex
+
+    # 避免内部数据结构暴露
+    def add_child(self, child):
+        self._children.append(child)
+
+    def remove_child(self, child):
+        self._children.remove(child)
 
 
 birth_day = date(1990, 1, 1)
