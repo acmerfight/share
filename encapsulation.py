@@ -33,3 +33,6 @@ person.sex = False
 birth_day = person.birth_day
 birth_day.replace(year=2000)
 print(birth_day)
+
+# case three
+# person.compute_age()
