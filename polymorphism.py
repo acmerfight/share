@@ -7,7 +7,7 @@ class Development(object):
     def run(self):
         self.rfc_review()
         self.write_code()
-        self.test()
+        self._test()
         self.release()
 
     @abc.abstractmethod
@@ -19,7 +19,7 @@ class Development(object):
         pass
 
     @staticmethod
-    def test():
+    def _test():
         print("test")
 
     @abc.abstractmethod
