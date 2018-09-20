@@ -24,7 +24,6 @@ class DictString(dict):
             raise TypeError("")
 
 
-
 class Bird(object):
 
     name = "Bird"
