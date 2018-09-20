@@ -18,9 +18,9 @@ class Development(object):
     def write_code(self):
         pass
 
-    @abc.abstractmethod
-    def qa_test(self):
-        pass
+    @staticmethod
+    def test():
+        print("test")
 
     @abc.abstractmethod
     def release(self):
@@ -29,12 +29,15 @@ class Development(object):
 
 class LiveDevelopment(Development):
 
-    def _step_1(self):
-        print("step1")
+    def rfc_review(self):
+        print("MySQL，HBase")
 
-    def _step_3(self):
-        print("step3")
+    def write_code(self):
+        print("Java")
+
+    def release(self):
+        print("build APP, upload")
 
 
 if __name__ == "__main__":
-    ConcreteClass().run()
+    LiveDevelopment().run()
