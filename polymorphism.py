@@ -7,7 +7,7 @@ class Development(object):
     def run(self):
         self.rfc_review()
         self.write_code()
-        self.qa_test()
+        self.test()
         self.release()
 
     @abc.abstractmethod
