@@ -11,6 +11,20 @@ class Stack(list):
     #     pass
 
 
+class DictString(dict):
+
+    def __setitem__(self, key, value):
+        if (
+            isinstance(key, str) and
+            isinstance(value, str)
+        ):
+            super(DictString, self).__setitem__(key, value)
+        else:
+
+            raise TypeError("")
+
+
+
 class Bird(object):
 
     name = "Bird"
@@ -23,7 +37,9 @@ class Bird(object):
 
 
 class Ostrich(Bird):
+    """
+    can't fly
+    """
 
     def laid_eggs(self):
         pass
-
