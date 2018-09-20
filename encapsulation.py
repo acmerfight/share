@@ -24,7 +24,6 @@ children = []
 person = Person(birth_day, sex, children)
 
 # case one
-person.compute_age = 18
 person.children = [1]
 person.sex = False
 

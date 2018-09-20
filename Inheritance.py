@@ -42,3 +42,6 @@ class Ostrich(Bird):
 
     def laid_eggs(self):
         pass
+
+    def fly(self):
+        raise Exception("Ostrich can't fly")
