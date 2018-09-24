@@ -9,6 +9,7 @@ class Person(object):
         self.birth_day = birth_day
         self.sex = sex
         self.children = children
+        self.age = self.compute_age()
 
     def compute_age(self):
         today = date.today()
@@ -22,6 +23,8 @@ birth_day = date(1989, 1, 1)
 sex = True
 children = []
 person = Person(birth_day, sex, children)
+
+person.age = 10
 
 # case one
 person.children = [1]
