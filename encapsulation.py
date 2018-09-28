@@ -20,6 +20,9 @@ class Person(object):
             return today.year - self.birth_day.year - 1
 
 
+
+
+
 person = Person(date(1990, 1, 1), u"male", [], u"新垣结衣")
 
 person.birth_day = date(2020, 1, 1)
