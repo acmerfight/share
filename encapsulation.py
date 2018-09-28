@@ -5,10 +5,11 @@ from datetime import date
 
 class Person(object):
 
-    def __init__(self, birth_day, sex, children):
+    def __init__(self, birth_day, sex, children, lover):
         self.birth_day = birth_day
         self.sex = sex
         self.children = children
+        self.lover = lover
         self.age = self.compute_age()
 
     def compute_age(self):
