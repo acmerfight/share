@@ -22,7 +22,7 @@ class Person(object):
 
 person = Person(date(1990, 1, 1), u"male", [], u"新垣结衣")
 
-person.birth_day = date(1996, 1, 1)
+person.birth_day = date(2020, 1, 1)
 person.children = [1]
 person.sex = u"female"
 person.lover = u"刘亦菲"
