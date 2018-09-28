@@ -20,32 +20,18 @@ class Person(object):
             return today.year - self.birth_day.year - 1
 
 
+person = Person(date(1989, 1, 1), "Male", [], "新垣结衣")
 
 
+# case one
+person.children = [1]
+person.sex = False
 
 
+# case two
+birth_day = person.birth_day
+birth_day.replace(year=2000)
+print(birth_day)
 
-
-
-
-
-#
-# birth_day = date(1989, 1, 1)
-# sex = True
-# children = []
-# person = Person(birth_day, sex, children)
-#
-# person.age = 10
-#
-# # case one
-# person.children = [1]
-# person.sex = False
-#
-#
-# # case two
-# birth_day = person.birth_day
-# birth_day.replace(year=2000)
-# print(birth_day)
-#
-# # case three
-# # person.compute_age()
+# case three
+# person.compute_age()
