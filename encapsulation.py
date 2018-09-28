@@ -20,7 +20,7 @@ class Person(object):
             return today.year - self.birth_day.year - 1
 
 
-person = Person(date(1989, 1, 1), "Male", [], "新垣结衣")
+person = Person(date(1989, 1, 1), u"Male", [], u"新垣结衣")
 
 
 # case one
