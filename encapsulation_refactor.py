@@ -6,9 +6,6 @@ from datetime import date
 class Person(object):
 
     def __init__(self, birth_day, sex, children, lover):
-        # self.__birth_day = birth_day
-        # self.__sex = sex
-        # self.__children = children
         self._birth_day = birth_day
         self._sex = sex
         self._children = children
@@ -34,13 +31,8 @@ class Person(object):
     def children(self):
         return self._children
 
-    @children.setter
-    def children(self, children):
-        self._children = children
-
-    # def add_child(self, child):
-    #     self._children.append(child)
-
+    def add_child(self, child):
+        self._children.append(child)
 
 
 # birth_day = date(1990, 1, 1)
