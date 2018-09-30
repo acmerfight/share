@@ -53,7 +53,7 @@ class DoppelDict(dict):
         super().__setitem__(key, [value] * 2)
 
 
-dd = DoppelDict(one=1)
-dd["two"] = 2
+dd = DictString(one=1)
+dd["two"] = "2"
 print(dd)
 
