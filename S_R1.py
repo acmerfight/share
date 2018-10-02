@@ -22,6 +22,8 @@ class DataFormatter(object):
         self._data_formatting = data_formatting
 
     def format(self):
+        # step1
+        # step2
         pass
 
 
