@@ -16,14 +16,5 @@ class Question(object):
 
     def _format_data(self):
         # 50 行代码
-        # bulalala
-        # bulalala
-        # bulalala
-        # bulalala
-        # bulalala
-        # bulalala
-        # bulalala
-        # bulalala
-        # bulalala
-        # bulalala
+        # do some thing
         pass

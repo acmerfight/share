@@ -1,15 +1,12 @@
-# coding=utf-8
-
-
 class Question(object):
 
     def __init__(self, question_id, data_formatting):
         self._question_id = question_id
-        self._data_formatting = data_formatting
+        self._data_formatter = DataFormatter(data_formatting)
 
     def get(self):
         self._get_data()
-        return self._format_data()
+        return self._data_formatter.format()
 
     def _get_data(self):
         # connect_MySQL
@@ -18,10 +15,11 @@ class Question(object):
         # get_data_from_Redis
         pass
 
-    def _format_data(self):
-        # do something
+
+class DataFormatter(object):
+
+    def __init__(self, data_formatting):
+        self._data_formatting = data_formatting
+
+    def format(self):
         pass
-
-
-
-
