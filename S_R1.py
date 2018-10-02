@@ -23,3 +23,6 @@ class DataFormatter(object):
 
     def format(self):
         pass
+
+
+Question(question_id=1, data_formatting="PDF").get()

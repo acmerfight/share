@@ -26,5 +26,5 @@ class DataFormatter(object):
 
 
 data_formatter = DataFormatter(data_formatting="PDF")
-Question(question_id=1, data_formatter=data_formatter)
+Question(question_id=1, data_formatter=data_formatter).get()
 
