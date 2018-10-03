@@ -6,7 +6,16 @@ class Question(object):
 
     def get(self):
         self._get_data()
-        return self._data_formatter.format()
+        if isinstance(self._data_formatter, JsonFormatter) and self._data_formatter._data_formatting == "txt":
+            # do some thing
+            return
+        else:
+            return self._data_formatter.format()
+        # try:
+        #     return self._data_formatter.format()
+        # except Exception:
+        #     # do something
+        #     return
 
     def _get_data(self):
         # connect_MySQL
@@ -22,17 +31,20 @@ class DataFormatter(object):
         self._data_formatting = data_formatting
 
     def format(self):
+        # do something
         pass
 
 
 class ThriftFormatter(DataFormatter):
     def format(self):
+        # do something
         pass
 
 
 class JsonFormatter(DataFormatter):
     def format(self):
-        if self._data_formatting == "txt":
+        if self._data_formatting != "txt":
+            # do something
             pass
         else:
             raise Exception("")
