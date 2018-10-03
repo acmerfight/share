@@ -24,6 +24,20 @@ class DataFormatter(object):
     def format(self):
         pass
 
-data_formatter = DataFormatter(data_formatting="PDF")
+
+class ThriftFormatter(DataFormatter):
+    def format(self):
+        pass
+
+
+class JsonFormatter(DataFormatter):
+    def format(self):
+        if self._data_formatting == "txt":
+            pass
+        else:
+            raise Exception("")
+
+
+data_formatter = JsonFormatter(data_formatting="PDF")
 Question(question_id=1, data_formatter=data_formatter).get()
 
