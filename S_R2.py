@@ -24,7 +24,6 @@ class DataFormatter(object):
     def format(self):
         pass
 
-
 data_formatter = DataFormatter(data_formatting="PDF")
 Question(question_id=1, data_formatter=data_formatter).get()
 
