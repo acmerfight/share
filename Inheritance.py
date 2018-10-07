@@ -36,9 +36,6 @@ class Bird(object):
 
 
 class Ostrich(Bird):
-    """
-    can't fly
-    """
 
     def laid_eggs(self):
         pass
